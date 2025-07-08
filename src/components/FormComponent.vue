@@ -1,23 +1,23 @@
 <template>
   <form @submit.prevent="handleSubmit">
     <div>
-      <label for="firstName">Ad:</label>
+      <label for="firstName">{{$t('firstName')}}:</label>
       <input id="firstName" v-model="form.firstName" required />
     </div>
     <div>
-      <label for="lastName">Soyad:</label>
+      <label for="lastName">{{$t('lastName')}}:</label>
       <input id="lastName" v-model="form.lastName" required />
     </div>
     <div>
-      <label for="email">E-posta:</label>
+      <label for="email">{{$t('email')}}:</label>
       <input id="email" type="email" v-model="form.email" required />
     </div>
     <div>
-      <label for="dob">Doğum Tarihi:</label>
+      <label for="dob">{{$t('dob')}}:</label>
       <input id="dob" type="date" v-model="form.dob" required />
     </div>
-    <button type="submit">Gönder</button>
-    <div v-if="success" class="success-msg">Form başarıyla gönderildi!</div>
+    <button type="submit">{{$t('submit')}}</button>
+    <div v-if="success" class="success-msg">{{$t('success')}}</div>
   </form>
 </template>
 
